@@ -1,8 +1,14 @@
 package metaheuristic.sandbox;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import java.util.List;
 
@@ -18,12 +24,17 @@ public class SandboxData {
     @Data
     @EqualsAndHashCode(callSuper = false)
     @NoArgsConstructor
+    @AllArgsConstructor
     public static class SimpleList extends BaseDataClass {
         public List<SimpleItem> items;
 
-        public SimpleList(List<SimpleItem> items) {
+        @JsonCreator
+        public SimpleList(@JsonProperty("status") List<SimpleItem> items,
+                                   @JsonProperty("errorMessages") @Nullable List<String> errorMessages,
+                                   @JsonProperty("infoMessages") @Nullable List<String> infoMessages) {
             this.items = items;
+            this.errorMessages = errorMessages;
+            this.infoMessages = infoMessages;
         }
     }
-
 }

@@ -20,6 +20,8 @@ public class SimpleRestController {
 
     public static final SandboxData.SimpleList SIMPLE_LIST;
 
+    public static final String INFO_MESSAGE = "This is a simple list";
+
     static {
         SIMPLE_LIST = new SandboxData.SimpleList(
                 List.of(
@@ -30,7 +32,7 @@ public class SimpleRestController {
                         new SandboxData.SimpleItem(5, "Item #5")
                 )
         );
-        SIMPLE_LIST.addInfoMessage("This is a simple list");
+        SIMPLE_LIST.addInfoMessage(INFO_MESSAGE);
     }
 
     @GetMapping("/list")
