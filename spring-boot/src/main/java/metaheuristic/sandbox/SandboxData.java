@@ -27,7 +27,7 @@ public class SandboxData {
         public List<SimpleItem> items;
 
         @JsonCreator
-        public SimpleList(@JsonProperty("status") List<SimpleItem> items,
+        public SimpleList(@JsonProperty("items") List<SimpleItem> items,
                                    @JsonProperty("errorMessages") @Nullable List<String> errorMessages,
                                    @JsonProperty("infoMessages") @Nullable List<String> infoMessages) {
             this.items = items;

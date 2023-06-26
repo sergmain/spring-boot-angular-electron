@@ -32,24 +32,21 @@ export class BatchListComponent extends UIStateComponent implements OnInit, OnDe
     }
 
     ngOnInit(): void {
-        this.isFiltered = this.settingsService.events.value.settings.batchFilter;
-        this.updateTable('0', this.isFiltered);
+        this.updateTable();
     }
 
     ngOnDestroy(): void {
         this.unsubscribeSubscriptions();
     }
 
-    updateTable(pageNumbder: string, isFiltered: boolean): void {
+    updateTable(): void {
         this.isLoading = true;
         this.batchService
-            .batches(pageNumbder, isFiltered)
+            .batches()
             .subscribe({
                 next: batchesResult => {
                     this.batchesResult = batchesResult;
-                    this.columnsToDisplay = this.authenticationService.isRoleOperator() ?
-                        ['id', 'createdOn', 'Owner', 'sourceCode', 'execState', 'bts'] :
-                        ['id', 'createdOn', 'Owner', 'isBatchConsistent', 'sourceCode', 'execState', 'bts'];
+                    this.columnsToDisplay = ['id', 'name'];
                     this.dataSource = new MatTableDataSource(batchesResult.items || []);
                     this.isLoading = false;
                 }
