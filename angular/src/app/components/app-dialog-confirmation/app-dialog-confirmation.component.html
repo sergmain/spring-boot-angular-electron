@@ -1,0 +1,7 @@
+<div class="mat-dialog-content">
+  <p>{{data.question}}</p>
+</div>
+<div class="mat-dialog-actions">
+  <button mat-stroked-button="mat-stroked-button" (click)="onNoClick()">{{data.rejectTitle}}</button>
+  <button mat-flat-button="mat-flat-button" color="{{getTheme(data.theme)}}" (click)="onYesClick()">{{data.resolveTitle}}</button>
+</div>
