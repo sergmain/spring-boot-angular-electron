@@ -1,0 +1,3 @@
+@rem org\springframework\boot\loader\JarLauncher.class  --java-options '--win-menu' org.springframework.boot.loader.JarLauncher
+@rem C:\jdk-17.0.7\bin\jpackage.exe --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class metaheuristic.sandbox.Main --type app-image 
+C:\jdk-17.0.7\bin\jpackage.exe --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class metaheuristic.sandbox.Main --type app-image
