@@ -3,7 +3,6 @@ package metaheuristic.sandbox;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @author Sergio Lissner
@@ -15,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("metaheuristic.sandbox.Main was launched");
         SpringApplication.run(Main.class, args);
     }
 }

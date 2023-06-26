@@ -1,0 +1,3 @@
+@rem C:\jdk-17.0.7\bin\jpackage.exe --input jar --dest output --name metaheuristic --main-jar metaheuristic.jar --main-class metaheuristic.sandbox.Main --type app-image --java-options '-ea \'-Dfile.encoding=UTF-8\' -Dspring.profiles.active=dispatcher,processor,h2 -Dmh.home=C:\\mhbp_home --win-console'
+
+C:\jdk-17.0.7\bin\jpackage.exe --input jar --dest output --name metaheuristic --main-jar metaheuristic.jar --main-class metaheuristic.sandbox.Main --type app-image --java-options '--win-console'
