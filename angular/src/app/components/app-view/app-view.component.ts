@@ -86,12 +86,4 @@ export class AppViewComponent extends UIStateComponent implements OnInit, OnDest
     toggleTheme(event: MatSlideToggleChange): void {
         this.settingsService.toggleTheme();
     }
-
-    toggleLanguage(event: MatSelectChange): void {
-        this.settingsService.toggleLanguage(event.value);
-    }
-
-    logout(): void {
-        this.authenticationService.logout().subscribe();
-    }
 }
