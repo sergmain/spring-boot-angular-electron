@@ -1,3 +1,3 @@
 @rem org\springframework\boot\loader\JarLauncher.class  --java-options '--win-menu' org.springframework.boot.loader.JarLauncher
-@rem C:\jdk-17.0.7\bin\jpackage.exe --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class metaheuristic.sandbox.Main --type app-image 
-C:\jdk-17.0.7\bin\jpackage.exe --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class metaheuristic.sandbox.Main --type app-image
+@rem C:\jdk-17.0.7\bin\jpackage.exe --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class metaheuristic.sandbox.Main --type app-image   --java-options '--win-console'
+C:\jdk-17.0.7\bin\jpackage.exe --verbose --input jar-cli --dest output --name metaheuristic --main-jar metaheuristic-cli.jar --main-class org.springframework.boot.loader.JarLauncher --type app-image --java-options '--win-console' --java-options -ea --java-options -Dfile.encoding=UTF-8 --java-options -Dspring.profiles.active=dispatcher,processor,h2 --java-options -Dmh.home=C:\\mhbp_home1

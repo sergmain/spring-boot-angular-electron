@@ -1,6 +1,8 @@
 package metaheuristic.sandbox;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +17,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/rest/v1/sandbox")
 @RequiredArgsConstructor
+@Slf4j
 public class SimpleRestController {
+
+    @Value("${spring.profiles.active:#{null}}")
+    private String activeProfiles;
 
     public static final SandboxData.SimpleList SIMPLE_LIST;
 
@@ -35,7 +41,10 @@ public class SimpleRestController {
     }
 
     @GetMapping("/list")
-    public SandboxData.SimpleList chats() {
+    public SandboxData.SimpleList list() {
+        final String s = "metaheuristic.sandbox.SimpleRestController.list() was called, profiles: [" + activeProfiles+"]";
+        log.warn(s);
+        System.out.println(s);
         return SIMPLE_LIST;
     }
 }
