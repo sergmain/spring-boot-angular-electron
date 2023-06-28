@@ -2,6 +2,17 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
+const child = require('child_process').execFile;
+const executablePath = path.join(__dirname, 'metaheuristic', 'metaheuristic.exe');
+
+child(executablePath, function(err, data) {
+  if(err){
+    console.error(err);
+    return;
+  }
+  console.log(data.toString());
+});
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

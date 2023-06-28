@@ -1,0 +1,15 @@
+
+D:\…spring-boot-angular-electron\angular-electron\metaheuristic-win32-x64>                                                                           ↑
+Error: spawn metaheuristic\metaheuristic.exe ENOENTpy       6RenMov     7MkFold     8Delete     9ConfMn     10Quit       11Plugin     12Screen
+    at ChildProcess._handle.onexit (node:internal/child_process:283:19)
+    at onErrorNT (node:internal/child_process:476:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'spawn metaheuristic\\metaheuristic.exe',
+  path: 'metaheuristic\\metaheuristic.exe',
+  spawnargs: [],
+  cmd: 'metaheuristic\\metaheuristic.exe'
+}
+(node:17908) electron: Failed to load URL: file:///D:/github/spring-boot-angular-electron/angular-electron/metaheuristic-win32-x64/resources/app/dist/mh-angular/index.html with error: ERR_FILE_NOT_FOUND
+D:\…spring-boot-angular-electron\angular-electron\metaheuristic-win32-x64>cls
