@@ -38,11 +38,10 @@
     "extract-i18n": "ngx-translate-extract  -p /**/*.html /**/*.ts /**/*.pug --input ./src --output ./src/assets/i18n/EN.json ./src/assets/i18n/RU.json --clean --sort --format json --marker marker",
     "ng--migrate-only--from12.0.0 --to 13.0.0": "ng update @angular/cdk --migrate-only --from 12.0.0 --to 13.0.0",
     "sass-migrator namespace **/*.scss": "sass-migrator -n namespace **/*.scss",
-
     "npm install electron-builder --save-dev": "npm install electron-builder --save-dev",
     "npm install -g electron-packager --save-dev": "npm install -g electron-packager --save-dev",
-    "electron-packager": "electron-packager appdirectory metaheuristic --platform=win32 --arch=x64 --electron-version=25.1.0",
-    "electron-packager 2": "electron-packager appdirectory metaheuristic --overwrite --asar --electron-version=25.1.0 --platform=win32 --arch=x64 --prune=true --out=release-builds --icon=./build/icon.ico"
+    "electron-packager": "electron-packager appdirectory metaheuristic --out=release-builds --platform=win32 --arch=x64 --electron-version=25.2.0",
+    "electron-packager 2": "electron-packager appdirectory metaheuristic --out=release-builds --platform=win32 --arch=x64 --electron-version=25.2.0 --overwrite --asar --prune=true  --icon=./build/icon.ico"
   },
   "engines": {
     "node": "v16.20.0",
@@ -86,7 +85,7 @@
     "@types/node": "^16.18.23",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
-    "electron": "^25.1.0",
+    "electron": "^25.2.0",
     "electron-builder": "^24.4.0",
     "eslint": "^8.39.0",
     "ts-node": "10.9.1",
